@@ -1,0 +1,58 @@
+.contact-card-wrapper > .contact-card {
+	border-color: @primary-color;
+	background: transparent;
+	border-radius: 4px;
+	padding: 1rem 2.5rem;
+	min-height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	@media (max-width: 768px) {
+		padding: 1rem;
+	}
+	p,
+	h1 {
+		margin: 0;
+	}
+
+	.primary-text {
+		font-size: 1.25rem;
+		font-family: Tenor, sans-serif;
+	}
+	.main-text {
+		font-family: Montserrat, sans-serif;
+		font-size: 3rem;
+		color: @white;
+		line-height: 57px;
+
+		@media (max-width: 768px) {
+			font-size: 2rem;
+			line-height: normal;
+		}
+	}
+	.secondary-text {
+		font-family: Manrope, sans-serif;
+		font-size: 1.3rem;
+		color: @white;
+	}
+}
+
+.service-img-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 4rem;
+
+	.service-img {
+	}
+	.title-text {
+		font-family: Montserrat, sans-serif;
+		font-size: 1.3rem;
+		color: @black;
+		padding-top: 1.8rem;
+		font-weight: 500;
+	}
+}
