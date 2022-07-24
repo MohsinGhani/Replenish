@@ -22,7 +22,7 @@ const ServicesDetails = () => {
 		<div className="service-detail-wrapper">
 			<div className="layout-wrapper">
 				<h1 className="main-heading">Services</h1>
-				<p className="content">
+				<p className="_content">
 					Replenish MD’s specializations are cosmetic treatments that
 					slow the signs of aging, preserve your beauty, and bring
 					back your youthful glow. In each individual session, we
@@ -41,8 +41,7 @@ const ServicesDetails = () => {
 				<Button size="large" type="primary" className="more-btn">
 					learn more
 				</Button>
-
-				<Row gutter={[32, 32]}>
+				<Row gutter={[16, 16]}>
 					{servicesArr?.map((arr, key) => (
 						<Col xs={24} sm={12} md={8} key={key}>
 							<ServicesImgText

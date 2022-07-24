@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-
-// eslint-disable-next-line import/no-unresolved
 import { Formik } from "formik";
-
-// eslint-disable-next-line import/no-unresolved
 import * as Yup from "yup";
-
 import { Progress } from "antd";
-
 import PropTypes from "prop-types";
-
 import AdDescription from "../DisplayModal/displayAdDescription";
 import AdMedia from "../DisplayModal/displayAdMedia";
 import AdWebsite from "../DisplayModal/displayAdWebsite";
@@ -26,8 +19,10 @@ const DisplayModalContent = ({ setIsModalVisible }) => {
 	const [step, setStep] = useState(1);
 
 	const back = () => {
-		// eslint-disable-next-line no-unused-expressions
-		step === 1 ? "" : setStep(step - 1);
+		if (step === 1) {
+			return "";
+		}
+		return setStep(step - 1);
 	};
 
 	// Formik Form Values

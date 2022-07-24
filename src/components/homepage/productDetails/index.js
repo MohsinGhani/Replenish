@@ -1,27 +1,31 @@
 import React from "react";
 import { Image, Button } from "antd";
+import { IconLogo } from "../layoutWrapper/iconLogo";
+import { BlackTextLogo } from "./blackTextLogo";
 
 const ProductDetails = () => {
 	return (
 		<div className="product-detail-wrapper">
 			<div className="layout-wrapper">
 				<div className="logo">
-					<Image
+					{/* <Image
 						src="/icons/logo2.png"
 						className="main-logo"
 						alt="logo"
 						preview={false}
-					/>{" "}
+					/>{" "} */}
+					{IconLogo}
 					&nbsp; &nbsp;
-					<Image
+					{BlackTextLogo}
+					{/* <Image
 						src="/icons/logo-black.png"
 						className="main-logo"
 						alt="logo"
 						preview={false}
-					/>
+					/> */}
 				</div>
 				<h1 className="main-heading">Preserving Your Natural Beauty</h1>
-				<p className="content">
+				<p className="_content">
 					At Replenish MD our expert staff is dedicated to providing
 					our clients with the most advanced and refined cosmetic
 					treatments available. The goal of our treatments is to

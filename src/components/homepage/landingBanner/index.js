@@ -1,141 +1,57 @@
 import React from "react";
-import { Button, Carousel, Dropdown, Image, Menu, Space, Grid } from "antd";
-import { DownOutlined, UserOutlined } from "@ant-design/icons";
-
-const menu = (
-	<Menu
-		items={[
-			{
-				label: "1st menu item",
-				key: "1",
-				icon: <UserOutlined />,
-			},
-			{
-				label: "2nd menu item",
-				key: "2",
-				icon: <UserOutlined />,
-			},
-			{
-				label: "3rd menu item",
-				key: "3",
-				icon: <UserOutlined />,
-			},
-		]}
-	/>
-);
-
-const bannerImgs = [
-	{
-		title: "banner1",
-		img: "/images/banner1.png",
-	},
-	{
-		title: "banner2",
-		img: "/images/banner2.png",
-	},
-	{
-		title: "banner3",
-		img: "/images/banner3.png",
-	},
-	{
-		title: "banner4",
-		img: "/images/banner4.png",
-	},
-	{
-		title: "banner5",
-		img: "/images/banner5.png",
-	},
-	{
-		title: "banner6",
-		img: "/images/banner6.png",
-	},
-];
+import { Carousel, Image, Grid } from "antd";
+import BookNowDropown from "src/common/bookNowDropdown/index.js";
+import { BannerImgs } from "./bannerData";
+import { BannerLogo } from "./bannerLogo";
 
 const { useBreakpoint } = Grid;
 
 const LandingBanner = () => {
 	const screens = useBreakpoint();
 
+	const reponsiveHanlder = () => {
+		if (screens?.xl || screens?.xxl) {
+			return 900;
+		}
+		if (screens?.lg) {
+			return 700;
+		}
+		if (screens?.md) {
+			return 650;
+		}
+		if (screens?.sm) {
+			return 450;
+		}
+		return 350;
+	};
+
 	return (
 		<div className="landing-banner-container">
 			<div className="layout-wrapper">
 				<div className="banner-inner-content">
 					<h1 className="main-heading">Welcome To</h1>
-					<Image
+					{/* <Image
 						src="/icons/trans-logo.png"
 						alt=""
 						preview={false}
 						className="trans-logo"
-					/>
+					/> */}
+					{BannerLogo}
 					<br />
-					<Dropdown overlay={menu}>
-						<Button type="default" className="book-btn">
-							<Space>
-								Book Now
-								<DownOutlined />
-							</Space>
-						</Button>
-					</Dropdown>
+					<BookNowDropown />
 				</div>
 			</div>
-			<Carousel autoplay className="banners">
-				{bannerImgs?.map((banner, index) => (
+			<Carousel className="banners">
+				{BannerImgs?.map((banner, index) => (
 					<Image
 						src={banner?.img}
 						alt={banner?.title}
-						height={screens?.lg ? 900 : 550}
+						height={reponsiveHanlder()}
+						width="100%"
 						preview={false}
 						key={index}
 					/>
 				))}
-				{/* <div>
-					<Image
-						src="/images/banner1.png"
-						alt=""
-						height={900}
-						preview={false}
-					/>
-				</div>
-				<div>
-					<Image
-						src="/images/banner2.png"
-						alt=""
-						height={900}
-						preview={false}
-					/>
-				</div>
-				<div>
-					<Image
-						src="/images/banner3.png"
-						alt=""
-						height={900}
-						preview={false}
-					/>
-				</div>
-				<div>
-					<Image
-						src="/images/banner4.png"
-						alt=""
-						height={900}
-						preview={false}
-					/>
-				</div>
-				<div>
-					<Image
-						src="/images/banner6.png"
-						alt=""
-						height={900}
-						preview={false}
-					/>
-				</div>
-				<div>
-					<Image
-						src="/images/banner5.png"
-						alt=""
-						height={900}
-						preview={false}
-					/>
-				</div> */}
 			</Carousel>
 		</div>
 	);

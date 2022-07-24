@@ -10,7 +10,12 @@ const propTypes = {
 const ServicesImgText = ({ serviceImg, serviceText }) => {
 	return (
 		<div className="service-img-wrapper">
-			<Image src={serviceImg} className="service-img" alt="img" />
+			<Image
+				src={serviceImg}
+				className="service-img"
+				alt="img"
+				preview={false}
+			/>
 			<p className="title-text">{serviceText}</p>
 		</div>
 	);

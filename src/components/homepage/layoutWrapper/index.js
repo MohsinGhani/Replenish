@@ -16,6 +16,10 @@ import { useRouter } from "next/router";
 import React from "react";
 import PropTypes from "prop-types";
 import { AlignRightOutlined } from "@ant-design/icons";
+import { IconLogo } from "./iconLogo";
+import { TextLogo } from "./textLogo";
+import { SubMenu } from "./subMenu";
+import { FooterIcon } from "./footerIcon";
 
 const { useBreakpoint } = Grid;
 const { Header, Content, Footer } = Layout;
@@ -32,6 +36,7 @@ const LayoutWrapper = ({ children }) => {
 		{
 			title: "Heathcare",
 			list: [
+				"Heathcare",
 				"For Individuals",
 				"Locations",
 				"Doctors",
@@ -44,6 +49,7 @@ const LayoutWrapper = ({ children }) => {
 		{
 			title: "Articles",
 			list: [
+				"Articles",
 				"Health Concerns",
 				"Recipes & Nutrition",
 				"Optimizations",
@@ -53,11 +59,12 @@ const LayoutWrapper = ({ children }) => {
 		},
 		{
 			title: "Company",
-			list: ["Mission", "Origin", "Careers", "Team", "Press"],
+			list: ["Company", "Mission", "Origin", "Careers", "Team", "Press"],
 		},
 		{
 			title: "Help & Support",
 			list: [
+				"Help & Support",
 				"Contact",
 				"Common Questions",
 				"Membership",
@@ -78,21 +85,27 @@ const LayoutWrapper = ({ children }) => {
 					<div className="header-inline-item">
 						<p className="hou-call">
 							HOU : &nbsp;
-							<Image
-								src="/icons/Call.png"
-								className="call-icon"
-								alt="icon"
-							/>
-							&nbsp; (832) 770-7975
+							<a href="tel:832-770-7975">
+								<Image
+									src="/icons/Call.png"
+									className="call-icon"
+									alt="icon"
+									preview={false}
+								/>
+								&nbsp; (832) 770-7975
+							</a>
 						</p>
 						<p className="training-call">
 							Training :&nbsp;
-							<Image
-								src="/icons/Call.png"
-								className="call-icon"
-								alt="icon"
-							/>
-							&nbsp; (832) 953-0313
+							<a href="tel:832-953-0313">
+								<Image
+									src="/icons/Call.png"
+									className="call-icon"
+									alt="icon"
+									preview={false}
+								/>
+								&nbsp; (832) 953-0313
+							</a>
 						</p>
 					</div>
 					<Space align="center" wrap>
@@ -137,188 +150,7 @@ const LayoutWrapper = ({ children }) => {
 								Home
 							</a>
 						</Link>
-
-						<Menu
-							theme="dark"
-							// triggerSubMenuAction="click"
-							mode="horizontal"
-							className="submenu-container"
-						>
-							<Menu.SubMenu
-								title="Services"
-								popupClassName="submenu-popup-class"
-								className="menu-container"
-								popupOffset={[0, 0]}
-								key="SubMenu"
-							>
-								<Row gutter={[16, 16]}>
-									<Col xs={8}>
-										<Link href="">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/dermal-filler.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Botox/Dermal Fillers
-											</a>
-										</Link>
-									</Col>
-									<Col xs={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/dermal-filler-parties.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Botox / Dermal Filler Parties
-											</a>
-										</Link>
-									</Col>
-									<Col xs={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/iv-bag.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												IV therapy
-											</a>
-										</Link>
-									</Col>
-									<Col xs={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/hormonal-therapy.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Bioidentical Hormone Replacement
-												Therapy
-											</a>
-										</Link>
-									</Col>
-									<Col xs={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/hormonal-ring.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Tesosterone therapy
-											</a>
-										</Link>
-									</Col>
-									<Col xs={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/diet.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Medical Weight Loss
-											</a>
-										</Link>
-									</Col>
-									<Col xs={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/slim-body.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Peptide Therapy (Sermorelin/
-												Ipamorelin)
-											</a>
-										</Link>
-									</Col>
-									<Col xs={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/flask.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Mobile Labs/ Micronutrient
-												Testing
-											</a>
-										</Link>
-									</Col>
-								</Row>
-							</Menu.SubMenu>
-						</Menu>
-
+						<SubMenu />
 						<Link href="/services">
 							<a
 								className={
@@ -342,19 +174,21 @@ const LayoutWrapper = ({ children }) => {
 							</a>
 						</Link>
 						<div className="logo">
-							<Image
-								src="/icons/logo2.png"
+							{/* <Image
+								src="/icons/replenish-logo1.svg"
 								className="main-logo"
 								alt="logo"
 								preview={false}
-							/>
+							/> */}
+							{IconLogo}
 							&nbsp; &nbsp;
-							<Image
+							{/* <Image
 								src="/icons/logo1.png"
 								className="main-logo"
 								alt="logo"
 								preview={false}
-							/>
+							/> */}
+							{TextLogo}
 						</div>
 						<Link href="/services">
 							<a
@@ -705,14 +539,15 @@ const LayoutWrapper = ({ children }) => {
 				<div className="layout-wrapper">
 					<Row gutter={[32, 32]}>
 						<Col xs={0} md={6}>
-							<Image
+							{/* <Image
 								src="/icons/footer-logo.png"
 								alt="icon"
 								preview={false}
-							/>
-							<p className="logo-slogan-text">
+							/> */}
+							{FooterIcon}
+							{/* <p className="logo-slogan-text">
 								Power by ReplenishMD
-							</p>
+							</p> */}
 							<p className="slogan-text">
 								Simple innate summer fat appear basket his
 								desire joy.
@@ -765,6 +600,7 @@ const LayoutWrapper = ({ children }) => {
 									lg: 4,
 									xl: 4,
 									xxl: 4,
+									gutter: [16, 64],
 								}}
 								dataSource={footer}
 								renderItem={(item) => (

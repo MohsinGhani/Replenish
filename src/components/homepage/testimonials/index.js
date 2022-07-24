@@ -12,7 +12,7 @@ const Testimonials = () => {
 					alt="logo"
 					preview={false}
 				/>
-				<p className="content">
+				<p className="_content">
 					The aesthetics training course provided by ReplenishMD was
 					exceptional. The 2-day training started with an informative
 					didactic portion in the morning. The second part of each day
