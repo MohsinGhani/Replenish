@@ -190,7 +190,7 @@ const Card = ({ child, onClick, name }) => {
 
 Card.propTypes = {
 	name: PropTypes.string,
-	child: PropTypes.any,
+	child: PropTypes.node,
 	onClick: PropTypes.func,
 };
 

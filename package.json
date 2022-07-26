@@ -25,7 +25,7 @@
     "formik": "^2.2.9",
     "frontmatter-markdown-loader": "^3.7.0",
     "lodash": "^4.17.21",
-    "next": "12.1.6",
+    "next": "^12.1.6",
     "next-redux-wrapper": "^7.0.5",
     "nprogress": "^0.2.0",
     "numeral": "^2.0.6",

@@ -1,11 +1,11 @@
 import React from "react";
-import AdsPage from "src/containers/Ads";
+import AdsPage from "src/containers/Adds";
 
 const Ads = () => {
 	return (
-		<div>
-			<AdsPage />
-		</div>
+		<>
+			<AdsPage/>
+		</>
 	);
 };
 

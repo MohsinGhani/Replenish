@@ -313,7 +313,7 @@ const DisplayModalContent = ({ setIsModalVisible }) => {
 };
 
 DisplayModalContent.propTypes = {
-	setIsModalVisible: PropTypes.func,
+	setIsModalVisible: PropTypes.bool,
 };
 
 export default DisplayModalContent;

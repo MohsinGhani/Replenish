@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { Col, Row } from "antd";
 
 import CommonModal from "src/common/modal";
-import DisplayModalContent from "../../DisplayModalContent";
-import SearchModalContent from "../../SearchModalContent";
-import VideoModalContent from "../../VideoModalContent";
-import Card from "./card";
+import DisplayModalContent from "src/components/adsPage/DisplayModalContent";
+import SearchModalContent from "src/components/adsPage/SearchModalContent";
+import VideoModalContent from "src/components/adsPage/VideoModalContent";
+import Card from "src/components/adsPage/ads/adsTypes/card";
 
 const AdsType = () => {
 	const [isModalVisible, setIsModalVisible] = useState(false);
@@ -22,6 +22,7 @@ const AdsType = () => {
 	const rend = (key) => {
 		switch (key) {
 			case "searchModal":
+				console.log("key", key);
 				return (
 					<SearchModalContent setIsModalVisible={setIsModalVisible} />
 				);
@@ -50,7 +51,7 @@ const AdsType = () => {
 								child={data.number}
 								key={key}
 								name={data.name}
-								onclick={() => openModal(data.key)}
+								onClick={() => openModal(data.key)}
 							/>
 						</Col>
 					))}

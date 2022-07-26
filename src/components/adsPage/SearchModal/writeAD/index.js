@@ -147,14 +147,14 @@ const WriteAD = ({ back, handleChange, handleBlur, values, errors }) => {
 						topClass="nextTop"
 						width="128px"
 						height="48px"
-						background="var(--secondary)"
+						background="#8dd9c2"
 						borderRadius="24px 0px 0px 24px"
 						color="#ffffff"
 						htmlType="submit"
 					/>
 					<CommonButton
 						child="Back"
-						background="var(--primary)"
+						background="#2c99cb"
 						classname="back"
 						width="128px"
 						height="48px"

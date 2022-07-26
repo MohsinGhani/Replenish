@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Button } from "antd";
+import { Button } from "antd";
 import { IconLogo } from "../layoutWrapper/iconLogo";
 import { BlackTextLogo } from "./blackTextLogo";
 

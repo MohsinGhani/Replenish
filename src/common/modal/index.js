@@ -2,6 +2,8 @@ import React from "react";
 
 import { Modal } from "antd";
 
+import PropTypes from "prop-types";
+
 const CommonModal = ({
 	setIsModalVisible,
 	isModalVisible,
@@ -28,6 +30,13 @@ const CommonModal = ({
 			</Modal>
 		</div>
 	);
+};
+
+CommonModal.propTypes = {
+	setIsModalVisible: PropTypes.func,
+	isModalVisible: PropTypes.bool,
+	children: PropTypes.func,
+	width: PropTypes.number,
 };
 
 export default CommonModal;

@@ -3,7 +3,7 @@ import React from "react";
 import AdsType from "./adsTypes";
 import TopBar from "./topbar";
 
-const ADS = () => {
+const Ads = () => {
 	return (
 		<div>
 			<TopBar />
@@ -12,4 +12,4 @@ const ADS = () => {
 	);
 };
 
-export default ADS;
+export default Ads;
