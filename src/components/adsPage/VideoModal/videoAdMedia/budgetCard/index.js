@@ -1,7 +1,5 @@
 import React from "react";
-import Image from "next/image";
-
-import { Card, Avatar, Button } from "antd";
+import { Card, Avatar, Button, Image } from "antd";
 
 const VideoPreview = () => {
 	return (

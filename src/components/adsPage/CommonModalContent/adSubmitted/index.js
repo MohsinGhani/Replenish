@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import { Button } from "antd";
+import { Button, Image } from "antd";
 import PropTypes from "prop-types";
 
 const propTypes = {

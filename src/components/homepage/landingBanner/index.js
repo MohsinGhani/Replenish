@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel, Image, Grid } from "antd";
 import BookNowDropown from "src/common/bookNowDropdown/index.js";
+import { BannerLogo } from "src/components/SVGImageIcon/bannerLogo";
 import { BannerImgs } from "./bannerData";
-import { BannerLogo } from "./bannerLogo";
 
 const { useBreakpoint } = Grid;
 
@@ -30,18 +30,13 @@ const LandingBanner = () => {
 			<div className="layout-wrapper">
 				<div className="banner-inner-content">
 					<h1 className="main-heading">Welcome To</h1>
-					{/* <Image
-						src="/icons/trans-logo.png"
-						alt=""
-						preview={false}
-						className="trans-logo"
-					/> */}
 					{BannerLogo}
+					<p className="slogn-text">Power by ReplenishMD </p>
 					<br />
 					<BookNowDropown />
 				</div>
 			</div>
-			<Carousel className="banners">
+			<Carousel className="banners" autoplay effect="fade">
 				{BannerImgs?.map((banner, index) => (
 					<Image
 						src={banner?.img}

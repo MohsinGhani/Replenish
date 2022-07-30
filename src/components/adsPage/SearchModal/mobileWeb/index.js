@@ -1,9 +1,5 @@
 import React from "react";
-
-import Image from "next/image";
-
-import { Button, Radio } from "antd";
-
+import { Button, Radio, Image } from "antd";
 import CommonButton from "src/common/button";
 
 import PropTypes from "prop-types";

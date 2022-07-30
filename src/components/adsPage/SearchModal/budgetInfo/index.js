@@ -1,8 +1,5 @@
 import React from "react";
-
-import Image from "next/image";
-
-import { Input } from "antd";
+import { Input, Image } from "antd";
 
 import InputFieldNoCount from "src/common/inputFieldWithoutCount";
 import CommonButton from "src/common/button";

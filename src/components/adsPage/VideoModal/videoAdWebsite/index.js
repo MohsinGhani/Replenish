@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
 
-import { Alert, Button, Checkbox } from "antd";
+import { Alert, Button, Checkbox, Image } from "antd";
 
 import TextField from "src/common/textField";
 import VideoPreview from "src/components/adsPage/VideoModal/videoAdMedia/budgetCard";

@@ -16,10 +16,16 @@ import { useRouter } from "next/router";
 import React from "react";
 import PropTypes from "prop-types";
 import { AlignRightOutlined } from "@ant-design/icons";
-import { IconLogo } from "./iconLogo";
-import { TextLogo } from "./textLogo";
+import { CallIcon } from "src/components/SVGImageIcon/callIcon";
+import { PhoneTextIcon } from "src/components/SVGImageIcon/phoneTextIcon";
+import { LinkdinIcon } from "src/components/SVGImageIcon/linkdinIcon";
+import { MessengerIcon } from "src/components/SVGImageIcon/messengerIcon";
+import { TwitterIcon } from "src/components/SVGImageIcon/twitterIcon";
+import { TwooIcon } from "src/components/SVGImageIcon/twooIcon";
+import { FooterIcon } from "src/components/SVGImageIcon/footerIcon";
+import { TextLogo } from "src/components/SVGImageIcon/textLogo";
+import { IconLogo } from "src/components/SVGImageIcon/iconLogo";
 import { SubMenu } from "./subMenu";
-import { FooterIcon } from "./footerIcon";
 
 const { useBreakpoint } = Grid;
 const { Header, Content, Footer } = Layout;
@@ -83,56 +89,35 @@ const LayoutWrapper = ({ children }) => {
 			<Header className="top-header">
 				<div className="header-wrapper">
 					<div className="header-inline-item">
-						<p className="hou-call">
-							HOU : &nbsp;
-							<a href="tel:832-770-7975">
-								<Image
-									src="/icons/Call.png"
-									className="call-icon"
-									alt="icon"
-									preview={false}
-								/>
-								&nbsp; (832) 770-7975
-							</a>
-						</p>
-						<p className="training-call">
-							Training :&nbsp;
-							<a href="tel:832-953-0313">
-								<Image
-									src="/icons/Call.png"
-									className="call-icon"
-									alt="icon"
-									preview={false}
-								/>
-								&nbsp; (832) 953-0313
-							</a>
-						</p>
+						<Space align="center" size="large" wrap>
+							<div className="hou-call">
+								HOU : &nbsp;
+								<a href="tel:832-770-7975">
+									{CallIcon}
+									&nbsp; (832) 770-7975
+								</a>
+							</div>
+							<div className="training-call">
+								Training :&nbsp;
+								<a href="tel:832-953-0313">
+									{PhoneTextIcon}
+									&nbsp; (832) 953-0313
+								</a>
+							</div>
+						</Space>
 					</div>
+
 					<Space align="center" wrap>
-						<Image
-							src="/icons/linkedin.png"
-							className="social-icon"
-							alt="icon"
-							preview={false}
-						/>
-						<Image
-							src="/icons/messenger.png"
-							className="social-icon"
-							alt="icon"
-							preview={false}
-						/>
-						<Image
-							src="/icons/twitter.png"
-							className="social-icon"
-							alt="icon"
-							preview={false}
-						/>
-						<Image
-							src="/icons/twoo.png"
-							className="social-icon"
-							alt="icon"
-							preview={false}
-						/>
+						{LinkdinIcon}
+						{MessengerIcon}
+						{TwitterIcon}
+						{TwooIcon}
+						<Divider type="vertical" className="vertical-divider" />
+						<Space size="small">
+							<span>ReplenishMD :</span>
+							<Link href="#">Sign up</Link>
+							<Link href="#">Login</Link>
+						</Space>
 					</Space>
 				</div>
 			</Header>
@@ -174,20 +159,8 @@ const LayoutWrapper = ({ children }) => {
 							</a>
 						</Link>
 						<div className="logo">
-							{/* <Image
-								src="/icons/replenish-logo1.svg"
-								className="main-logo"
-								alt="logo"
-								preview={false}
-							/> */}
 							{IconLogo}
 							&nbsp; &nbsp;
-							{/* <Image
-								src="/icons/logo1.png"
-								className="main-logo"
-								alt="logo"
-								preview={false}
-							/> */}
 							{TextLogo}
 						</div>
 						<Link href="/services">
@@ -223,6 +196,7 @@ const LayoutWrapper = ({ children }) => {
 								Become a provider
 							</a>
 						</Link>
+						<Divider type="vertical" className="vertical-divider" />
 						<Button size="middle" ghost className="border-btn">
 							Book Now
 						</Button>
@@ -539,44 +513,16 @@ const LayoutWrapper = ({ children }) => {
 				<div className="layout-wrapper">
 					<Row gutter={[32, 32]}>
 						<Col xs={0} md={6}>
-							{/* <Image
-								src="/icons/footer-logo.png"
-								alt="icon"
-								preview={false}
-							/> */}
 							{FooterIcon}
-							{/* <p className="logo-slogan-text">
-								Power by ReplenishMD
-							</p> */}
 							<p className="slogan-text">
 								Simple innate summer fat appear basket his
 								desire joy.
 							</p>
 							<Space align="center" wrap>
-								<Image
-									src="/icons/linkedin.png"
-									className="social-icon"
-									alt="icon"
-									preview={false}
-								/>
-								<Image
-									src="/icons/messenger.png"
-									className="social-icon"
-									alt="icon"
-									preview={false}
-								/>
-								<Image
-									src="/icons/twitter.png"
-									className="social-icon"
-									alt="icon"
-									preview={false}
-								/>
-								<Image
-									src="/icons/twoo.png"
-									className="social-icon"
-									alt="icon"
-									preview={false}
-								/>
+								{LinkdinIcon}
+								{MessengerIcon}
+								{TwitterIcon}
+								{TwooIcon}
 							</Space>
 						</Col>
 						<Col xs={24} md={18}>

@@ -1,28 +1,16 @@
 import React from "react";
 import { Button } from "antd";
-import { IconLogo } from "../layoutWrapper/iconLogo";
-import { BlackTextLogo } from "./blackTextLogo";
+import { IconLogo } from "src/components/SVGImageIcon/iconLogo";
+import { BlackTextLogo } from "src/components/SVGImageIcon/blackTextLogo";
 
 const ProductDetails = () => {
 	return (
 		<div className="product-detail-wrapper">
 			<div className="layout-wrapper">
 				<div className="logo">
-					{/* <Image
-						src="/icons/logo2.png"
-						className="main-logo"
-						alt="logo"
-						preview={false}
-					/>{" "} */}
 					{IconLogo}
 					&nbsp; &nbsp;
 					{BlackTextLogo}
-					{/* <Image
-						src="/icons/logo-black.png"
-						className="main-logo"
-						alt="logo"
-						preview={false}
-					/> */}
 				</div>
 				<h1 className="main-heading">Preserving Your Natural Beauty</h1>
 				<p className="_content">

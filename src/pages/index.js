@@ -11,11 +11,7 @@ const defaultProps = {
 };
 
 const HomePage = (props) => {
-	return (
-		<div>
-			<Home />
-		</div>
-	);
+	return <Home />;
 };
 
 HomePage.propTypes = propTypes;

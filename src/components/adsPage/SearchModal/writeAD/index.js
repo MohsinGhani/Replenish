@@ -1,8 +1,5 @@
 import React from "react";
-
-import Image from "next/image";
-
-import { Checkbox, Select } from "antd";
+import { Checkbox, Select, Image } from "antd";
 
 import InputField from "src/common/inputField";
 import CommonButton from "src/common/button";

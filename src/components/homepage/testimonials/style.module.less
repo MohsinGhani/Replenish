@@ -9,6 +9,10 @@
 	@media (max-width: 768px) {
 		padding: 3rem 0;
 	}
+	.tertimonial-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
 
 	.main-heading {
 		margin-bottom: 2.5rem;
@@ -28,5 +32,32 @@
 		color: #000000;
 		font-weight: 500;
 		padding-top: 1rem;
+	}
+
+	.banners {
+		position: relative;
+
+		.custom-dot {
+			bottom: -50px;
+			li {
+				background: #decfb3;
+				width: 28px;
+				height: 5px;
+				border-radius: 4px;
+				button {
+					background: inherit;
+					transition: none;
+				}
+			}
+			.slick-active {
+				background: #2d2d2b !important;
+				width: 28px;
+				height: 5px;
+				button {
+					background: inherit;
+					transition: none;
+				}
+			}
+		}
 	}
 }
