@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Button } from "antd";
 import React from "react";
 
@@ -19,12 +20,12 @@ const CommonButton = ({
 		<div className={topClass}>
 			<Button
 				style={{
-					width: width,
-					height: height,
-					background: background,
-					borderRadius: borderRadius,
-					color: color,
-					border: border,
+					width,
+					height,
+					background,
+					borderRadius,
+					color,
+					border,
 				}}
 				className={classname}
 				onClick={onClick}
