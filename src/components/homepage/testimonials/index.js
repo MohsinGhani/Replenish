@@ -11,6 +11,7 @@ const Testimonials = () => {
 				<Carousel
 					className="banners"
 					effect="fade"
+					autoplay
 					dots={{ className: "custom-dot" }}
 				>
 					<div>

@@ -89,22 +89,20 @@ const LayoutWrapper = ({ children }) => {
 			<Header className="top-header">
 				<div className="header-wrapper">
 					<div className="header-inline-item">
-						<Space align="center" size="large" wrap>
-							<div className="hou-call">
-								HOU : &nbsp;
-								<a href="tel:832-770-7975">
-									{CallIcon}
-									&nbsp; (832) 770-7975
-								</a>
-							</div>
-							<div className="training-call">
-								Training :&nbsp;
-								<a href="tel:832-953-0313">
-									{PhoneTextIcon}
-									&nbsp; (832) 953-0313
-								</a>
-							</div>
-						</Space>
+						<div className="hou-call">
+							HOU : &nbsp;
+							<a href="tel:832-770-7975">
+								{CallIcon}
+								&nbsp; (832) 770-7975
+							</a>
+						</div>
+						<div className="training-call ml-sm-3">
+							Training :&nbsp;
+							<a href="tel:832-953-0313">
+								{PhoneTextIcon}
+								&nbsp; (832) 953-0313
+							</a>
+						</div>
 					</div>
 
 					<Space align="center" wrap>
@@ -112,12 +110,12 @@ const LayoutWrapper = ({ children }) => {
 						{MessengerIcon}
 						{TwitterIcon}
 						{TwooIcon}
-						<Divider type="vertical" className="vertical-divider" />
+						{/* <Divider type="vertical" className="vertical-divider" />
 						<Space size="small">
 							<span>ReplenishMD :</span>
 							<Link href="#">Sign up</Link>
 							<Link href="#">Login</Link>
-						</Space>
+						</Space> */}
 					</Space>
 				</div>
 			</Header>

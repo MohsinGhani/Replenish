@@ -1,7 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { Carousel, Image, Grid } from "antd";
 import BookNowDropown from "src/common/bookNowDropdown/index.js";
 import { BannerLogo } from "src/components/SVGImageIcon/bannerLogo";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Navigation, Pagination, Autoplay } from "swiper";
 import { BannerImgs } from "./bannerData";
 
 const { useBreakpoint } = Grid;
@@ -17,7 +21,7 @@ const LandingBanner = () => {
 			return 700;
 		}
 		if (screens?.md) {
-			return 650;
+			return 600;
 		}
 		if (screens?.sm) {
 			return 450;
@@ -36,7 +40,81 @@ const LandingBanner = () => {
 					<BookNowDropown />
 				</div>
 			</div>
-			<Carousel className="banners" autoplay effect="fade">
+			<Swiper
+				modules={[EffectFade, Navigation, Pagination, Autoplay]}
+				speed={5000}
+				effect="fade"
+				// navigation
+				// pagination={{ clickable: true }}
+				scrollbar={{ draggable: true }}
+				// onSwiper={(swiper) => console.log(swiper)}
+				// onSlideChange={() => console.log("slide change")}
+				autoplay
+				className="banners"
+			>
+				{BannerImgs?.map((banner, index) => (
+					<SwiperSlide key={index}>
+						<Image
+							src={banner?.img}
+							alt={banner?.title}
+							height={reponsiveHanlder()}
+							width="100%"
+							preview={false}
+						/>
+					</SwiperSlide>
+				))}
+			</Swiper>
+
+			{/* <Swiper
+				spaceBetween={30}
+				slidesPerView={1}
+				onSlideChange={() => console.log("slide change")}
+				onSwiper={(swiper) => console.log(swiper)}
+				effect="fade"
+				// fadeEffect
+				// Autoplay
+				// Navigation
+				// pagination={{
+				// 	el: ".swiper-pagination",
+				// }}
+				// modules={[EffectFade]}
+				// effect="fade"
+				speed={2500}
+				navigation={{
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				}}
+				// loop
+				autoplay={{
+					delay: 500,
+				}}
+			>
+				{BannerImgs?.map((banner, index) => (
+					<SwiperSlide key={index}>
+						<Image
+							src={banner?.img}
+							alt={banner?.title}
+							height={reponsiveHanlder()}
+							width="100%"
+							preview={false}
+						/>
+					</SwiperSlide>
+				))}
+			</Swiper> */}
+			{/* <Swiper spaceBetween={30} modules={[EffectFade]} effect="fade">
+				{BannerImgs?.map((banner, index) => (
+					<SwiperSlide key={index}>
+						<Image
+							src={banner?.img}
+							alt={banner?.title}
+							height={reponsiveHanlder()}
+							width="100%"
+							preview={false}
+						/>
+					</SwiperSlide>
+				))}
+			</Swiper> */}
+			{/* <Carousel className="banners" autoplay effect="fade">
 				{BannerImgs?.map((banner, index) => (
 					<Image
 						src={banner?.img}
@@ -47,7 +125,7 @@ const LandingBanner = () => {
 						key={index}
 					/>
 				))}
-			</Carousel>
+			</Carousel> */}
 		</div>
 	);
 };
