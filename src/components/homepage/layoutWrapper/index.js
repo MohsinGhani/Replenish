@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import PropTypes from "prop-types";
-import { AlignLeftOutlined, AlignRightOutlined } from "@ant-design/icons";
+import { AlignLeftOutlined } from "@ant-design/icons";
 import { CallIcon } from "src/components/SVGImageIcon/callIcon";
 import { PhoneTextIcon } from "src/components/SVGImageIcon/phoneTextIcon";
 import { LinkdinIcon } from "src/components/SVGImageIcon/linkdinIcon";
@@ -26,9 +26,6 @@ import { FooterIcon } from "src/components/SVGImageIcon/footerIcon";
 import { TextLogo } from "src/components/SVGImageIcon/textLogo";
 import { IconLogo } from "src/components/SVGImageIcon/iconLogo";
 import { SubMenu } from "./subMenu";
-import { DermalFillerIcon } from "src/components/SVGImageIcon/dermalFillerIcon";
-import { DermalFiller2Icon } from "src/components/SVGImageIcon/dermalFiller2Icon";
-import { IVBagIcon } from "src/components/SVGImageIcon/iVBagIcon";
 
 const { useBreakpoint } = Grid;
 const { Header, Content, Footer } = Layout;

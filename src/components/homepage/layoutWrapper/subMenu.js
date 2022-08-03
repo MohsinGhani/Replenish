@@ -2,14 +2,14 @@ import React from "react";
 import { useRouter } from "next/router";
 import { Image, Row, Col, Menu } from "antd";
 import Link from "next/link";
-import { DermalFiller2Icon } from "src/components/SVGImageIcon/dermalFiller2Icon";
-import { DermalFillerIcon } from "src/components/SVGImageIcon/dermalFillerIcon";
-import { IVBagIcon } from "src/components/SVGImageIcon/iVBagIcon";
-import { HormonalTherapyIcon } from "src/components/SVGImageIcon/HormonalTherapyIcon";
-import { HormonalRingIcon } from "src/components/SVGImageIcon/hormonalRingIcon";
-import { DietIcon } from "src/components/SVGImageIcon/dietIcon";
-import { FlaskIcon } from "src/components/SVGImageIcon/flaskIcon";
-import { SlimBodyIcon } from "src/components/SVGImageIcon/slimBodyIcon";
+// import { DermalFiller2Icon } from "src/components/SVGImageIcon/dermalFiller2Icon";
+// import { DermalFillerIcon } from "src/components/SVGImageIcon/dermalFillerIcon";
+// import { IVBagIcon } from "src/components/SVGImageIcon/iVBagIcon";
+// import { HormonalTherapyIcon } from "src/components/SVGImageIcon/HormonalTherapyIcon";
+// import { HormonalRingIcon } from "src/components/SVGImageIcon/hormonalRingIcon";
+// import { DietIcon } from "src/components/SVGImageIcon/dietIcon";
+// import { FlaskIcon } from "src/components/SVGImageIcon/flaskIcon";
+// import { SlimBodyIcon } from "src/components/SVGImageIcon/slimBodyIcon";
 import PropTypes from "prop-types";
 
 const propTypes = {
