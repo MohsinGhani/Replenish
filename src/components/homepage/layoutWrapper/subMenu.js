@@ -2,8 +2,23 @@ import React from "react";
 import { useRouter } from "next/router";
 import { Image, Row, Col, Menu } from "antd";
 import Link from "next/link";
+import { DermalFiller2Icon } from "src/components/SVGImageIcon/dermalFiller2Icon";
+import { DermalFillerIcon } from "src/components/SVGImageIcon/dermalFillerIcon";
+import { IVBagIcon } from "src/components/SVGImageIcon/iVBagIcon";
+import { HormonalTherapyIcon } from "src/components/SVGImageIcon/HormonalTherapyIcon";
+import { HormonalRingIcon } from "src/components/SVGImageIcon/hormonalRingIcon";
+import { DietIcon } from "src/components/SVGImageIcon/dietIcon";
+import { FlaskIcon } from "src/components/SVGImageIcon/flaskIcon";
+import { SlimBodyIcon } from "src/components/SVGImageIcon/slimBodyIcon";
+import PropTypes from "prop-types";
 
-export const SubMenu = () => {
+const propTypes = {
+	subMenuMode: PropTypes.string.isRequired,
+};
+
+export const SubMenu = ({ subMenuMode }) => {
+	SubMenu.propTypes = propTypes;
+
 	const router = useRouter();
 	const currentRoute = router.pathname;
 	return (
@@ -36,6 +51,7 @@ export const SubMenu = () => {
 									alt="icon"
 									preview={false}
 								/>
+								{/* {DermalFillerIcon} */}
 								Botox/Dermal Fillers
 							</a>
 						</Link>
@@ -55,6 +71,7 @@ export const SubMenu = () => {
 									alt="icon"
 									preview={false}
 								/>
+								{/* {DermalFiller2Icon} */}
 								Botox / Dermal Filler Parties
 							</a>
 						</Link>
@@ -74,6 +91,7 @@ export const SubMenu = () => {
 									alt="icon"
 									preview={false}
 								/>
+								{/* {IVBagIcon} */}
 								IV therapy
 							</a>
 						</Link>
@@ -93,6 +111,7 @@ export const SubMenu = () => {
 									alt="icon"
 									preview={false}
 								/>
+								{/* {HormonalTherapyIcon} */}
 								Bioidentical Hormone Replacement Therapy
 							</a>
 						</Link>
@@ -112,6 +131,7 @@ export const SubMenu = () => {
 									alt="icon"
 									preview={false}
 								/>
+								{/* {HormonalRingIcon} */}
 								Tesosterone therapy
 							</a>
 						</Link>
@@ -131,6 +151,7 @@ export const SubMenu = () => {
 									alt="icon"
 									preview={false}
 								/>
+								{/* {DietIcon} */}
 								Medical Weight Loss
 							</a>
 						</Link>
@@ -150,6 +171,7 @@ export const SubMenu = () => {
 									alt="icon"
 									preview={false}
 								/>
+								{/* {SlimBodyIcon} */}
 								Peptide Therapy (Sermorelin/ Ipamorelin)
 							</a>
 						</Link>
@@ -169,6 +191,7 @@ export const SubMenu = () => {
 									alt="icon"
 									preview={false}
 								/>
+								{/* {FlaskIcon} */}
 								Mobile Labs/ Micronutrient Testing
 							</a>
 						</Link>
@@ -178,3 +201,5 @@ export const SubMenu = () => {
 		</Menu>
 	);
 };
+
+// export default SubMenu;

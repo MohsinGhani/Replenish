@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import PropTypes from "prop-types";
-import { AlignRightOutlined } from "@ant-design/icons";
+import { AlignLeftOutlined, AlignRightOutlined } from "@ant-design/icons";
 import { CallIcon } from "src/components/SVGImageIcon/callIcon";
 import { PhoneTextIcon } from "src/components/SVGImageIcon/phoneTextIcon";
 import { LinkdinIcon } from "src/components/SVGImageIcon/linkdinIcon";
@@ -26,6 +26,9 @@ import { FooterIcon } from "src/components/SVGImageIcon/footerIcon";
 import { TextLogo } from "src/components/SVGImageIcon/textLogo";
 import { IconLogo } from "src/components/SVGImageIcon/iconLogo";
 import { SubMenu } from "./subMenu";
+import { DermalFillerIcon } from "src/components/SVGImageIcon/dermalFillerIcon";
+import { DermalFiller2Icon } from "src/components/SVGImageIcon/dermalFiller2Icon";
+import { IVBagIcon } from "src/components/SVGImageIcon/iVBagIcon";
 
 const { useBreakpoint } = Grid;
 const { Header, Content, Footer } = Layout;
@@ -88,24 +91,32 @@ const LayoutWrapper = ({ children }) => {
 		<Layout className="layout">
 			<Header className="top-header">
 				<div className="header-wrapper">
-					<div className="header-inline-item">
-						<div className="hou-call">
-							HOU : &nbsp;
-							<a href="tel:832-770-7975">
-								{CallIcon}
-								&nbsp; (832) 770-7975
-							</a>
+					{screens.lg ? (
+						<div className="header-inline-item">
+							<div className="hou-call">
+								HOU : &nbsp;
+								<a href="tel:832-770-7975">
+									{CallIcon}
+									&nbsp; (832) 770-7975
+								</a>
+							</div>
+							<div className="training-call ml-sm-3">
+								Training :&nbsp;
+								<a href="tel:832-953-0313">
+									{PhoneTextIcon}
+									&nbsp; (832) 953-0313
+								</a>
+							</div>
 						</div>
-						<div className="training-call ml-sm-3">
-							Training :&nbsp;
-							<a href="tel:832-953-0313">
-								{PhoneTextIcon}
-								&nbsp; (832) 953-0313
-							</a>
+					) : (
+						<div className="logo">
+							{!screens.xs ? IconLogo : ""}
+							&nbsp; &nbsp;
+							{TextLogo}
 						</div>
-					</div>
+					)}
 
-					<Space align="center" wrap>
+					<Space align="center" wrap style={{ marginTop: "0.5rem" }}>
 						{LinkdinIcon}
 						{MessengerIcon}
 						{TwitterIcon}
@@ -116,6 +127,14 @@ const LayoutWrapper = ({ children }) => {
 							<Link href="#">Sign up</Link>
 							<Link href="#">Login</Link>
 						</Space> */}
+						{!screens.lg ? (
+							<AlignLeftOutlined
+								className="side-nav-icon"
+								onClick={() => setIsMobile(true)}
+							/>
+						) : (
+							""
+						)}
 					</Space>
 				</div>
 			</Header>
@@ -208,14 +227,7 @@ const LayoutWrapper = ({ children }) => {
 					</div>
 				</Header>
 			)}
-			{!screens.lg ? (
-				<AlignRightOutlined
-					className="side-nav-icon"
-					onClick={() => setIsMobile(true)}
-				/>
-			) : (
-				""
-			)}
+
 			<Drawer
 				title="Nav Menu"
 				placement="left"
@@ -442,19 +454,9 @@ const LayoutWrapper = ({ children }) => {
 							</a>
 						</Link>
 						<div className="logo">
-							<Image
-								src="/icons/logo2.png"
-								className="main-logo"
-								alt="logo"
-								preview={false}
-							/>{" "}
+							{IconLogo}
 							&nbsp; &nbsp;
-							<Image
-								src="/icons/logo1.png"
-								className="main-logo"
-								alt="logo"
-								preview={false}
-							/>
+							{TextLogo}
 						</div>
 						<Link href="/services">
 							<a
@@ -489,18 +491,39 @@ const LayoutWrapper = ({ children }) => {
 								Become a provider
 							</a>
 						</Link>
-						<Space size={100} align="center">
-							<Button size="middle" ghost className="border-btn">
-								Book Now
-							</Button>
-							<Button
-								size="middle"
-								type="primary"
-								className="promary-btn"
-							>
-								Login
-							</Button>
-						</Space>
+						<Button
+							size="middle"
+							block
+							ghost
+							className="border-btn"
+						>
+							Book Now
+						</Button>
+						<Button
+							size="middle"
+							type="primary"
+							className="promary-btn"
+							block
+						>
+							Login
+						</Button>
+
+						<div className="header-inline-item">
+							<div className="hou-call">
+								HOU : &nbsp;
+								<a href="tel:832-770-7975">
+									{CallIcon}
+									&nbsp; (832) 770-7975
+								</a>
+							</div>
+							<div className="training-call ml-sm-3">
+								Training :&nbsp;
+								<a href="tel:832-953-0313">
+									{PhoneTextIcon}
+									&nbsp; (832) 953-0313
+								</a>
+							</div>
+						</div>
 					</div>
 				</Header>
 			</Drawer>

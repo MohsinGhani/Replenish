@@ -13,7 +13,12 @@ const defaultProps = {
 
 const BookNowDropown = ({ btnType }) => {
 	return (
-		<Dropdown overlay={MenuList} className="btn-dropdown-wrapper">
+		<Dropdown
+			overlay={MenuList}
+			className="btn-dropdown-wrapper"
+			overlayClassName="overlay-custom-class"
+			trigger={["hover", "click"]}
+		>
 			<span className="btn-wrapper">
 				<Button
 					type={btnType || "default"}
@@ -21,7 +26,7 @@ const BookNowDropown = ({ btnType }) => {
 					className="book-btn"
 				>
 					<Space size="large">
-						Button
+						Book Now
 						<DownOutlined />
 					</Space>
 				</Button>
