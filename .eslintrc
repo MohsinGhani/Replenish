@@ -1,9 +1,11 @@
 {
-	"extends": ["airbnb", "next/core-web-vitals"],
+	"extends": "next",
 	"plugins": [],
 	"rules": {
+		"react/no-unescaped-entities": "off",
+		"@next/next/no-page-custom-font": "off",
 		"comma-dangle": "off",
-    	"@typescript-eslint/comma-dangle": "off",
+		"@typescript-eslint/comma-dangle": "off",
 		"react/function-component-definition": [
 			2,
 			{

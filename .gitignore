@@ -69,3 +69,5 @@ gh-pages/
 coverage
 
 static/server
+out.zip
+out.rar
