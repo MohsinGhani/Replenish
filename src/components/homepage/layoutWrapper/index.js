@@ -106,34 +106,33 @@ const LayoutWrapper = ({ children }) => {
 							</div>
 						</div>
 					) : (
-						<div className="logo">
-							{!screens.xs ? IconLogo : ""}
-							&nbsp; &nbsp;
-							{TextLogo}
-						</div>
+						<AlignLeftOutlined
+							className="side-nav-icon"
+							onClick={() => setIsMobile(true)}
+						/>
 					)}
-
-					<Space align="center" wrap style={{ marginTop: "0.5rem" }}>
-						{LinkdinIcon}
-						{MessengerIcon}
-						{TwitterIcon}
-						{TwooIcon}
-						{/* <Divider type="vertical" className="vertical-divider" />
-						<Space size="small">
-							<span>ReplenishMD :</span>
-							<Link href="#">Sign up</Link>
-							<Link href="#">Login</Link>
-						</Space> */}
-						{!screens.lg ? (
-							<AlignLeftOutlined
-								className="side-nav-icon"
-								onClick={() => setIsMobile(true)}
-							/>
-						) : (
-							""
-						)}
-					</Space>
+					{screens.lg ? (
+						<Space
+							align="center"
+							wrap
+							style={{ marginTop: "0.5rem" }}
+						>
+							{LinkdinIcon}
+							{MessengerIcon}
+							{TwitterIcon}
+							{TwooIcon}
+						</Space>
+					) : (
+						""
+					)}
 				</div>
+				{!screens.lg && (
+					<div className="logo">
+						{IconLogo}
+						&nbsp; &nbsp;
+						{TextLogo}
+					</div>
+				)}
 			</Header>
 			{screens.lg && (
 				<Header className="bottom-header">
@@ -226,303 +225,342 @@ const LayoutWrapper = ({ children }) => {
 			)}
 
 			<Drawer
-				title="Nav Menu"
+				title=""
 				placement="left"
 				onClose={() => setIsMobile(false)}
 				visible={isMobile}
 				width="75%"
 				className="side-drawer"
 			>
-				<Header className="bottom-header">
-					<div className="header-wrapper">
-						<Link href="/">
-							<a
-								className={
-									currentRoute === "/"
-										? "active"
-										: "non-active"
-								}
-							>
-								Home
-							</a>
-						</Link>
-
-						<Menu
-							theme="dark"
-							// triggerSubMenuAction="click"
-							mode="inline"
-							className="submenu-container"
-						>
-							<Menu.SubMenu
-								title="Services"
-								popupClassName="submenu-popup-class"
-								className="menu-container"
-								popupOffset={[0, 0]}
-								key="SubMenu"
-							>
-								<Row gutter={[16, 16]}>
-									<Col xs={24} lg={8}>
-										<Link href="">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/dermal-filler.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Botox/Dermal Fillers
-											</a>
-										</Link>
-									</Col>
-									<Col xs={24} lg={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/dermal-filler-parties.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Botox / Dermal Filler Parties
-											</a>
-										</Link>
-									</Col>
-									<Col xs={24} lg={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/iv-bag.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												IV therapy
-											</a>
-										</Link>
-									</Col>
-									<Col xs={24} lg={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/hormonal-therapy.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Bioidentical Hormone Replacement
-												Therapy
-											</a>
-										</Link>
-									</Col>
-									<Col xs={24} lg={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/hormonal-ring.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Tesosterone therapy
-											</a>
-										</Link>
-									</Col>
-									<Col xs={24} lg={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/diet.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Medical Weight Loss
-											</a>
-										</Link>
-									</Col>
-									<Col xs={24} lg={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/slim-body.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Peptide Therapy (Sermorelin/
-												Ipamorelin)
-											</a>
-										</Link>
-									</Col>
-									<Col xs={24} lg={8}>
-										<Link href="" className="submenu-link">
-											<a
-												className={
-													currentRoute ===
-													"/dermal-filler"
-														? "active-sub"
-														: "non-active-sub"
-												}
-											>
-												<Image
-													src="/icons/flask.png"
-													className="submenu-icon"
-													alt="icon"
-													preview={false}
-												/>
-												Mobile Labs/ Micronutrient
-												Testing
-											</a>
-										</Link>
-									</Col>
-								</Row>
-							</Menu.SubMenu>
-						</Menu>
-
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Membership
-							</a>
-						</Link>
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Shop
-							</a>
-						</Link>
-						<div className="logo">
-							{IconLogo}
-							&nbsp; &nbsp;
-							{TextLogo}
-						</div>
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Specials
-							</a>
-						</Link>
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Blog
-							</a>
-						</Link>
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Become a provider
-							</a>
-						</Link>
-						<Button
-							size="middle"
-							block
-							ghost
-							className="border-btn"
-						>
-							Book Now
-						</Button>
-						<Button
-							size="middle"
-							type="primary"
-							className="promary-btn"
-							block
-						>
-							Login
-						</Button>
-
-						<div className="header-inline-item">
-							<div className="hou-call">
-								HOU : &nbsp;
-								<a href="tel:832-770-7975">
-									{CallIcon}
-									&nbsp; (832) 770-7975
+				<div className="drawer-wrapper-bg">
+					<Header className="bottom-header">
+						<div className="header-wrapper">
+							<Link href="/">
+								<a
+									className={
+										currentRoute === "/"
+											? "active"
+											: "non-active"
+									}
+								>
+									Home
 								</a>
-							</div>
-							<div className="training-call ml-sm-3">
-								Training :&nbsp;
-								<a href="tel:832-953-0313">
-									{PhoneTextIcon}
-									&nbsp; (832) 953-0313
+							</Link>
+
+							<Menu
+								theme="dark"
+								// triggerSubMenuAction="click"
+								mode="inline"
+								className="submenu-container"
+							>
+								<Menu.SubMenu
+									title="Services"
+									popupClassName="submenu-popup-class"
+									className="menu-container"
+									popupOffset={[0, 0]}
+									key="SubMenu"
+								>
+									<Row gutter={[16, 16]}>
+										<Col xs={24} lg={8}>
+											<Link href="">
+												<a
+													className={
+														currentRoute ===
+														"/dermal-filler"
+															? "active-sub"
+															: "non-active-sub"
+													}
+												>
+													<Image
+														src="/icons/dermal-filler.png"
+														className="submenu-icon"
+														alt="icon"
+														preview={false}
+													/>
+													Botox/Dermal Fillers
+												</a>
+											</Link>
+										</Col>
+										<Col xs={24} lg={8}>
+											<Link
+												href=""
+												className="submenu-link"
+											>
+												<a
+													className={
+														currentRoute ===
+														"/dermal-filler"
+															? "active-sub"
+															: "non-active-sub"
+													}
+												>
+													<Image
+														src="/icons/dermal-filler-parties.png"
+														className="submenu-icon"
+														alt="icon"
+														preview={false}
+													/>
+													Botox / Dermal Filler
+													Parties
+												</a>
+											</Link>
+										</Col>
+										<Col xs={24} lg={8}>
+											<Link
+												href=""
+												className="submenu-link"
+											>
+												<a
+													className={
+														currentRoute ===
+														"/dermal-filler"
+															? "active-sub"
+															: "non-active-sub"
+													}
+												>
+													<Image
+														src="/icons/iv-bag.png"
+														className="submenu-icon"
+														alt="icon"
+														preview={false}
+													/>
+													IV therapy
+												</a>
+											</Link>
+										</Col>
+										<Col xs={24} lg={8}>
+											<Link
+												href=""
+												className="submenu-link"
+											>
+												<a
+													className={
+														currentRoute ===
+														"/dermal-filler"
+															? "active-sub"
+															: "non-active-sub"
+													}
+												>
+													<Image
+														src="/icons/hormonal-therapy.png"
+														className="submenu-icon"
+														alt="icon"
+														preview={false}
+													/>
+													Bioidentical Hormone
+													Replacement Therapy
+												</a>
+											</Link>
+										</Col>
+										<Col xs={24} lg={8}>
+											<Link
+												href=""
+												className="submenu-link"
+											>
+												<a
+													className={
+														currentRoute ===
+														"/dermal-filler"
+															? "active-sub"
+															: "non-active-sub"
+													}
+												>
+													<Image
+														src="/icons/hormonal-ring.png"
+														className="submenu-icon"
+														alt="icon"
+														preview={false}
+													/>
+													Tesosterone therapy
+												</a>
+											</Link>
+										</Col>
+										<Col xs={24} lg={8}>
+											<Link
+												href=""
+												className="submenu-link"
+											>
+												<a
+													className={
+														currentRoute ===
+														"/dermal-filler"
+															? "active-sub"
+															: "non-active-sub"
+													}
+												>
+													<Image
+														src="/icons/diet.png"
+														className="submenu-icon"
+														alt="icon"
+														preview={false}
+													/>
+													Medical Weight Loss
+												</a>
+											</Link>
+										</Col>
+										<Col xs={24} lg={8}>
+											<Link
+												href=""
+												className="submenu-link"
+											>
+												<a
+													className={
+														currentRoute ===
+														"/dermal-filler"
+															? "active-sub"
+															: "non-active-sub"
+													}
+												>
+													<Image
+														src="/icons/slim-body.png"
+														className="submenu-icon"
+														alt="icon"
+														preview={false}
+													/>
+													Peptide Therapy (Sermorelin/
+													Ipamorelin)
+												</a>
+											</Link>
+										</Col>
+										<Col xs={24} lg={8}>
+											<Link
+												href=""
+												className="submenu-link"
+											>
+												<a
+													className={
+														currentRoute ===
+														"/dermal-filler"
+															? "active-sub"
+															: "non-active-sub"
+													}
+												>
+													<Image
+														src="/icons/flask.png"
+														className="submenu-icon"
+														alt="icon"
+														preview={false}
+													/>
+													Mobile Labs/ Micronutrient
+													Testing
+												</a>
+											</Link>
+										</Col>
+									</Row>
+								</Menu.SubMenu>
+							</Menu>
+
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Membership
 								</a>
+							</Link>
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Shop
+								</a>
+							</Link>
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Specials
+								</a>
+							</Link>
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Blog
+								</a>
+							</Link>
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Become a provider
+								</a>
+							</Link>
+
+							<div className="side-nav-btns">
+								<Button
+									size="middle"
+									ghost
+									className="border-btn"
+								>
+									Book Now
+								</Button>
+								<Button
+									size="middle"
+									type="primary"
+									className="promary-btn"
+								>
+									Login to rmd
+								</Button>
+								<Button
+									size="middle"
+									type="primary"
+									className="promary-btn"
+								>
+									Signup to rmd
+								</Button>
 							</div>
+
+							<div className="header-inline-item">
+								<div className="hou-call">
+									HOU : &nbsp;
+									<a href="tel:832-770-7975">
+										{CallIcon}
+										&nbsp; (832) 770-7975
+									</a>
+								</div>
+								<div className="training-call">
+									Training :&nbsp;
+									<a href="tel:832-953-0313">
+										{PhoneTextIcon}
+										&nbsp; (832) 953-0313
+									</a>
+								</div>
+							</div>
+
+							<Space
+								align="center"
+								wrap
+								style={{ marginTop: "2rem" }}
+								size="middle"
+							>
+								{LinkdinIcon}
+								{MessengerIcon}
+								{TwitterIcon}
+								{TwooIcon}
+							</Space>
 						</div>
-					</div>
-				</Header>
+					</Header>
+				</div>
 			</Drawer>
 			<Content>
 				<div className="site-layout-content">{children}</div>

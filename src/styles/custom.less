@@ -323,7 +323,7 @@ img {
 	}
 }
 .side-nav-icon {
-	margin-left: 1rem;
+	// margin-left: 1rem;
 	// width: 4rem;
 	// height: 3.5rem;
 	font-size: 1.5rem;
@@ -345,6 +345,10 @@ img {
 		.ant-drawer-title {
 			color: @white !important;
 		}
+	}
+	.ant-drawer-body {
+		background-color: @dark-color;
+		padding: 0;
 	}
 }
 
@@ -403,11 +407,10 @@ img {
 
 	@media (max-width: 992px) {
 		justify-content: space-between;
-	}
-
-	@media (max-width: 576px) {
 		flex-direction: column;
 		align-items: flex-start;
+		line-height: 2rem;
+		margin-top: 1rem;
 	}
 
 	p {
