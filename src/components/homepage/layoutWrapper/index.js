@@ -530,16 +530,16 @@ const LayoutWrapper = ({ children }) => {
 								<Button
 									size="middle"
 									type="primary"
-									className="promary-btn"
+									className="primary-btn"
 								>
 									Login to rmd
 								</Button>
 								<Button
 									size="middle"
 									type="primary"
-									className="promary-btn"
+									className="secondary-btn"
 								>
-									Signup to rmd
+									signup to rmd
 								</Button>
 							</div>
 

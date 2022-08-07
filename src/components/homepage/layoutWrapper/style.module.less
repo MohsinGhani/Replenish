@@ -31,6 +31,7 @@
 			justify-content: center;
 			align-items: center;
 			width: 100%;
+			padding-right: 1.5rem;
 		}
 	}
 	.bottom-header {
@@ -241,6 +242,40 @@
 
 				&:nth-child(2n) {
 					margin: 0.5rem 1rem;
+				}
+			}
+
+			.border-btn {
+				color: @white;
+				border-color: @primary-color;
+
+				&:hover {
+					background: @primary-color;
+					color: @black;
+					border-color: @primary-color;
+				}
+			}
+
+			.primary-btn {
+				background: @primary-color;
+				color: @black;
+				border-color: @primary-color;
+
+				&:hover {
+					color: @white;
+					border-color: @primary-color;
+					background: transparent;
+				}
+			}
+			.secondary-btn {
+				background: @white;
+				color: @black;
+				border-color: @white;
+
+				&:hover {
+					color: @white;
+					border-color: @primary-color;
+					background: transparent;
 				}
 			}
 		}
