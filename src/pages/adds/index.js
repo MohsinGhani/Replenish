@@ -1,8 +1,8 @@
 import React from "react";
-// import AdsPage from "src/containers/Adds";
+import AdsPage from "src/containers/Adds";
 
 const Ads = () => {
-	return <h1>hello</h1>;
+	return <AdsPage />;
 };
 
 export default Ads;

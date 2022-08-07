@@ -581,7 +581,7 @@ const LayoutWrapper = ({ children }) => {
 			<Footer className="footer-container">
 				<div className="layout-wrapper">
 					<Row gutter={[32, 32]}>
-						<Col xs={0} md={6}>
+						<Col xs={24} lg={6}>
 							{FooterIcon}
 							<p className="slogan-text">
 								Simple innate summer fat appear basket his
@@ -594,7 +594,7 @@ const LayoutWrapper = ({ children }) => {
 								{TwooIcon}
 							</Space>
 						</Col>
-						<Col xs={24} md={18}>
+						<Col xs={24} lg={18}>
 							<List
 								className="footer-list"
 								header={

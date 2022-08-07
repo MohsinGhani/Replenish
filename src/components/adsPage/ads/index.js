@@ -5,10 +5,10 @@ import TopBar from "./topbar";
 
 const Ads = () => {
 	return (
-		<div>
+		<>
 			<TopBar />
 			<AdsType />
-		</div>
+		</>
 	);
 };
 

@@ -16,12 +16,23 @@ const Testimonials = () => {
 				>
 					<div>
 						<p className="_content">
-							I can have training with the supervisors on how to
-							utilize goals or assessments [in BambooHR], or how
-							to do one-on-ones. And across the board, it&apos;s
-							the same, no matter the location. That brings that
-							consistency you must have with multiple branches in
-							multiple locations.
+							At Replenish our expert staff is dedicated to
+							providing our clients with the most advanced and
+							refined cosmetic treatments available. The goal of
+							our treatments is to enhance your appearance,
+							reverse the signs of aging and restore youth while
+							preserving your natural beauty. Our providers build
+							confidence by taking the time to understand each of
+							our client's personal concerns and aesthetic goals
+							to build a deep and lasting relationship with our
+							patients. Based on their medical experience and
+							knowledge of cosmetic procedures, our doctors make
+							authentic recommendations for treatment. They
+							consider all aspects of the client such as age,
+							genetics, desires, and lifestyle to create a full,
+							restorative treatment plan that works with your
+							facial features and is true to you for undetectable
+							results.
 						</p>
 						<p className="author-name">J. D.</p>
 					</div>
