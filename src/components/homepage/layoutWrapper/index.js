@@ -10,6 +10,7 @@ import {
 	Menu,
 	Grid,
 	Drawer,
+	Collapse,
 } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -26,9 +27,11 @@ import { FooterIcon } from "src/components/SVGImageIcon/footerIcon";
 import { TextLogo } from "src/components/SVGImageIcon/textLogo";
 import { IconLogo } from "src/components/SVGImageIcon/iconLogo";
 import { SubMenu } from "./subMenu";
+import { FooterListArr } from "./footerData";
 
 const { useBreakpoint } = Grid;
 const { Header, Content, Footer } = Layout;
+const { Panel } = Collapse;
 
 const propTypes = {
 	children: PropTypes.node.isRequired,
@@ -37,48 +40,6 @@ const propTypes = {
 const LayoutWrapper = ({ children }) => {
 	const router = useRouter();
 	const currentRoute = router.pathname;
-
-	const footer = [
-		{
-			title: "Heathcare",
-			list: [
-				"Heathcare",
-				"For Individuals",
-				"Locations",
-				"Doctors",
-				"Health Coaches",
-				"Store",
-				"Log in",
-				"Join now",
-			],
-		},
-		{
-			title: "Articles",
-			list: [
-				"Articles",
-				"Health Concerns",
-				"Recipes & Nutrition",
-				"Optimizations",
-				"News",
-				"Guides",
-			],
-		},
-		{
-			title: "Company",
-			list: ["Company", "Mission", "Origin", "Careers", "Team", "Press"],
-		},
-		{
-			title: "Help & Support",
-			list: [
-				"Help & Support",
-				"Contact",
-				"Common Questions",
-				"Membership",
-				"Message Us",
-				"Talk to us",
-			],
-		},
-	];
 
 	const screens = useBreakpoint();
 
@@ -594,12 +555,12 @@ const LayoutWrapper = ({ children }) => {
 								{TwooIcon}
 							</Space>
 						</Col>
-						<Col xs={24} lg={18}>
+						<Col xs={0} sm={24} lg={18}>
 							<List
 								className="footer-list"
 								header={
 									<Row>
-										{footer?.map((list, key) => (
+										{FooterListArr?.map((list, key) => (
 											<Col xs={6} key={key}>
 												<p className="list-heading">
 													{list?.title}
@@ -615,9 +576,9 @@ const LayoutWrapper = ({ children }) => {
 									lg: 4,
 									xl: 4,
 									xxl: 4,
-									gutter: [16, 64],
+									gutter: [0, 64],
 								}}
-								dataSource={footer}
+								dataSource={FooterListArr}
 								renderItem={(item) => (
 									<List.Item>
 										{item?.list?.map((list, key) => (
@@ -631,6 +592,25 @@ const LayoutWrapper = ({ children }) => {
 									</List.Item>
 								)}
 							/>
+						</Col>
+						<Col xs={24} sm={0}>
+							<Collapse
+								accordion
+								ghost
+								expandIconPosition="end"
+								className="footer-collapse"
+							>
+								{FooterListArr?.map((item, index) => {
+									const key = index + 1;
+									return (
+										<Panel header={item?.title} key={key}>
+											{item?.list?.map((item) => (
+												<p key={key}>{item}</p>
+											))}
+										</Panel>
+									);
+								})}
+							</Collapse>
 						</Col>
 					</Row>
 

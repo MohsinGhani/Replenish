@@ -174,8 +174,8 @@
 				font-weight: 700;
 				margin: 0;
 
-				@media (max-width: 576px) {
-					font-size: 1rem;
+				@media (max-width: 768px) {
+					font-size: 1.1rem;
 				}
 			}
 		}
@@ -205,6 +205,32 @@
 
 			@media (max-width: 768px) {
 				font-size: 0.85rem;
+			}
+		}
+
+		.footer-collapse {
+			.ant-collapse-header {
+				color: @white;
+				font-family: Manrope, sans-serif;
+				font-size: 1.2rem;
+				line-height: normal;
+				padding-left: 0;
+
+				.ant-collapse-expand-icon {
+					span {
+						font-size: 1rem;
+					}
+				}
+			}
+			.ant-collapse-content {
+				color: @white;
+				font-family: Manrope, sans-serif;
+				line-height: normal;
+				font-size: 0.9rem;
+
+				.ant-collapse-content-box {
+					padding: 1rem 0.1rem;
+				}
 			}
 		}
 	}
