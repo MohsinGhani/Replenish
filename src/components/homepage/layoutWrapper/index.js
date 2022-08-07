@@ -97,7 +97,7 @@ const LayoutWrapper = ({ children }) => {
 									&nbsp; (832) 770-7975
 								</a>
 							</div>
-							<div className="training-call ml-sm-3">
+							<div className="training-call ml-lg-3">
 								Training :&nbsp;
 								<a href="tel:832-953-0313">
 									{PhoneTextIcon}
@@ -213,13 +213,26 @@ const LayoutWrapper = ({ children }) => {
 						<Button size="middle" ghost className="border-btn">
 							Book Now
 						</Button>
-						<Button
-							size="middle"
-							type="primary"
-							className="promary-btn"
+						<Divider type="vertical" className="vertical-divider" />
+						<Space
+							direction={!screens?.xl ? "vertical" : "horizontal"}
+							size={!screens?.xl ? 0 : "middle"}
 						>
-							Login
-						</Button>
+							<Button
+								size="middle"
+								type="primary"
+								className="primary-btn"
+							>
+								Login to rmd
+							</Button>
+							<Button
+								size="middle"
+								type="primary"
+								className="secondary-btn"
+							>
+								signup to rmd
+							</Button>
+						</Space>
 					</div>
 				</Header>
 			)}
