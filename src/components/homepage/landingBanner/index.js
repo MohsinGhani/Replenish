@@ -59,6 +59,7 @@ const LandingBanner = () => {
 							height={reponsiveHanlder()}
 							width="100%"
 							preview={false}
+							className="slider-img"
 						/>
 					</SwiperSlide>
 				))}

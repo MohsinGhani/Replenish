@@ -11,6 +11,7 @@ import {
 	Grid,
 	Drawer,
 	Collapse,
+	Affix,
 } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -28,6 +29,7 @@ import { TextLogo } from "src/components/SVGImageIcon/textLogo";
 import { IconLogo } from "src/components/SVGImageIcon/iconLogo";
 import { SubMenu } from "./subMenu";
 import { FooterListArr } from "./footerData";
+import { TiktokIcon } from "src/components/SVGImageIcon/tiktokIcon";
 
 const { useBreakpoint } = Grid;
 const { Header, Content, Footer } = Layout;
@@ -78,10 +80,25 @@ const LayoutWrapper = ({ children }) => {
 							wrap
 							style={{ marginTop: "0.5rem" }}
 						>
-							{LinkdinIcon}
-							{MessengerIcon}
-							{TwitterIcon}
-							{TwooIcon}
+							<Link href="" target="_blank">
+								{LinkdinIcon}
+							</Link>
+
+							<Link href="" target="_blank">
+								{MessengerIcon}
+							</Link>
+
+							<Link href="" target="_blank">
+								{TwitterIcon}
+							</Link>
+
+							<Link href="" target="_blank">
+								{TwooIcon}
+							</Link>
+
+							<Link href="" target="_blank">
+								{TiktokIcon}
+							</Link>
 						</Space>
 					) : (
 						""
@@ -96,106 +113,116 @@ const LayoutWrapper = ({ children }) => {
 				)}
 			</Header>
 			{screens.lg && (
-				<Header className="bottom-header">
-					<div className="header-wrapper">
-						<Link href="/">
-							<a
-								className={
-									currentRoute === "/"
-										? "active"
-										: "non-active"
+				<Affix offsetTop={0} style={{ zIndex: 16 }}>
+					<Header className="bottom-header">
+						<div className="header-wrapper">
+							<Link href="/">
+								<a
+									className={
+										currentRoute === "/"
+											? "active"
+											: "non-active"
+									}
+								>
+									Home
+								</a>
+							</Link>
+							<SubMenu />
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Membership
+								</a>
+							</Link>
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Shop
+								</a>
+							</Link>
+							<div className="logo">
+								{IconLogo}
+								&nbsp; &nbsp;
+								{TextLogo}
+							</div>
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Specials
+								</a>
+							</Link>
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Blog
+								</a>
+							</Link>
+							<Link href="/services">
+								<a
+									className={
+										currentRoute === "/services"
+											? "active"
+											: "non-active"
+									}
+								>
+									Become a provider
+								</a>
+							</Link>
+							<Divider
+								type="vertical"
+								className="vertical-divider"
+							/>
+							<Button size="middle" ghost className="border-btn">
+								Book Now
+							</Button>
+							<Divider
+								type="vertical"
+								className="vertical-divider"
+							/>
+							<Space
+								direction={
+									!screens?.xl ? "vertical" : "horizontal"
 								}
+								size={!screens?.xl ? 0 : "middle"}
 							>
-								Home
-							</a>
-						</Link>
-						<SubMenu />
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Membership
-							</a>
-						</Link>
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Shop
-							</a>
-						</Link>
-						<div className="logo">
-							{IconLogo}
-							&nbsp; &nbsp;
-							{TextLogo}
+								<Button
+									size="middle"
+									type="primary"
+									className="primary-btn"
+								>
+									Login
+								</Button>
+								<Button
+									size="middle"
+									type="primary"
+									className="secondary-btn"
+								>
+									signup
+								</Button>
+							</Space>
 						</div>
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Specials
-							</a>
-						</Link>
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Blog
-							</a>
-						</Link>
-						<Link href="/services">
-							<a
-								className={
-									currentRoute === "/services"
-										? "active"
-										: "non-active"
-								}
-							>
-								Become a provider
-							</a>
-						</Link>
-						<Divider type="vertical" className="vertical-divider" />
-						<Button size="middle" ghost className="border-btn">
-							Book Now
-						</Button>
-						<Divider type="vertical" className="vertical-divider" />
-						<Space
-							direction={!screens?.xl ? "vertical" : "horizontal"}
-							size={!screens?.xl ? 0 : "middle"}
-						>
-							<Button
-								size="middle"
-								type="primary"
-								className="primary-btn"
-							>
-								Login to rmd
-							</Button>
-							<Button
-								size="middle"
-								type="primary"
-								className="secondary-btn"
-							>
-								signup to rmd
-							</Button>
-						</Space>
-					</div>
-				</Header>
+					</Header>
+				</Affix>
 			)}
 
 			<Drawer
@@ -493,14 +520,14 @@ const LayoutWrapper = ({ children }) => {
 									type="primary"
 									className="primary-btn"
 								>
-									Login to rmd
+									Login
 								</Button>
 								<Button
 									size="middle"
 									type="primary"
 									className="secondary-btn"
 								>
-									signup to rmd
+									signup
 								</Button>
 							</div>
 
@@ -527,10 +554,25 @@ const LayoutWrapper = ({ children }) => {
 								style={{ marginTop: "2rem" }}
 								size="middle"
 							>
-								{LinkdinIcon}
-								{MessengerIcon}
-								{TwitterIcon}
-								{TwooIcon}
+								<Link href="" target="_blank">
+									{LinkdinIcon}
+								</Link>
+
+								<Link href="" target="_blank">
+									{MessengerIcon}
+								</Link>
+
+								<Link href="" target="_blank">
+									{TwitterIcon}
+								</Link>
+
+								<Link href="" target="_blank">
+									{TwooIcon}
+								</Link>
+
+								<Link href="" target="_blank">
+									{TiktokIcon}
+								</Link>
 							</Space>
 						</div>
 					</Header>
@@ -544,15 +586,27 @@ const LayoutWrapper = ({ children }) => {
 					<Row gutter={[32, 32]}>
 						<Col xs={24} lg={6}>
 							{FooterIcon}
-							<p className="slogan-text">
-								Simple innate summer fat appear basket his
-								desire joy.
-							</p>
-							<Space align="center" wrap>
-								{LinkdinIcon}
-								{MessengerIcon}
-								{TwitterIcon}
-								{TwooIcon}
+							<br />
+							<Space align="center" className="mt-4">
+								<Link href="" target="_blank">
+									{LinkdinIcon}
+								</Link>
+
+								<Link href="" target="_blank">
+									{MessengerIcon}
+								</Link>
+
+								<Link href="" target="_blank">
+									{TwitterIcon}
+								</Link>
+
+								<Link href="" target="_blank">
+									{TwooIcon}
+								</Link>
+
+								<Link href="" target="_blank">
+									{TiktokIcon}
+								</Link>
 							</Space>
 						</Col>
 						<Col xs={0} sm={24} lg={18}>

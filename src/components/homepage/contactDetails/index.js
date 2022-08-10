@@ -18,6 +18,7 @@ const ContactDetails = () => {
 								primaryText={arr.primaryText}
 								content={arr.content}
 								secondaryText={arr.secondary}
+								phoneNumber={arr.phoneNumber}
 							/>
 						</Col>
 					))}
