@@ -6,9 +6,9 @@ export const FooterListArr = [
 			"Locations",
 			"Doctors",
 			"Health Coaches",
-			"Store",
-			"Log in",
-			"Join now",
+			// "Store",
+			// "Log in",
+			// "Join now",
 		],
 	},
 	{
@@ -18,12 +18,18 @@ export const FooterListArr = [
 			"Recipes & Nutrition",
 			"Optimizations",
 			"News",
-			"Guides",
+			// "Guides",
 		],
 	},
 	{
 		title: "Company",
-		list: ["Mission", "Origin", "Careers", "Team", "Press"],
+		list: [
+			"Mission",
+			"Origin",
+			"Careers",
+			"Team",
+			// "Press"
+		],
 	},
 	{
 		title: "Help & Support",
@@ -32,7 +38,7 @@ export const FooterListArr = [
 			"Common Questions",
 			"Membership",
 			"Message Us",
-			"Talk to us",
+			// "Talk to us",
 		],
 	},
 ];

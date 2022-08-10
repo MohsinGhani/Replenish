@@ -6,8 +6,9 @@ export const ContactListArr = [
 	},
 	{
 		primaryText: "Contact Details",
-		content: "(832) 770-7975",
-		secondary: "Call/Text- are for a consultation",
+		content: "",
+		phoneNumber: "(832) 770-7975",
+		secondary: "Call/Text for a consultation",
 	},
 	{
 		primaryText: "Replenish # 2",
@@ -16,8 +17,9 @@ export const ContactListArr = [
 	},
 	{
 		primaryText: "Contact Details",
-		content: "(832) 953-0313",
-		secondary: "Call/Text- are for a consultation",
+		content: "",
+		phoneNumber: "(832) 953-0313",
+		secondary: "Call/Text for a consultation",
 	},
 	{
 		primaryText: "Replenish # 3",
@@ -26,8 +28,9 @@ export const ContactListArr = [
 	},
 	{
 		primaryText: "Contact Details",
-		content: "(832) 770-7975",
-		secondary: "Call/Text- are for a consultation",
+		content: "",
+		phoneNumber: "(832) 770-7975",
+		secondary: "Call/Text for a consultation",
 	},
 	{
 		primaryText: "Replenish # 4",
@@ -36,7 +39,8 @@ export const ContactListArr = [
 	},
 	{
 		primaryText: "Contact Details",
-		content: "(832) 953-0313",
-		secondary: "Call/Text- are for a consultation",
+		content: "",
+		phoneNumber: "(832) 953-0313",
+		secondary: "Call/Text for a consultation",
 	},
 ];

@@ -6,7 +6,7 @@ const ServicesDetails = () => {
 	const servicesArr = [
 		{
 			serviceImg: "/images/service3.png",
-			serviceTitle: "PDO Threads",
+			serviceTitle: "Facials",
 		},
 		{
 			serviceImg: "/images/service2.png",
